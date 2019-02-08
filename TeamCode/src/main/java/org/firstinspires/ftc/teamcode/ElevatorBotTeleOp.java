@@ -20,10 +20,15 @@ public class ElevatorBotTeleOp extends RobotControlSystemOpMode {
 		super.opModeLoop();
 
 		controlDrive();
+		controlLandervator();
 	}
 
 	private void controlDrive () {
 		robot.driveTrain.controlOverride(-gamepad1.left_stick_y,gamepad1.left_stick_x);
+	}
+
+	private void controlLandervator () {
+		robot.landervator.controlExtension(-gamepad2.left_stick_y);
 	}
 
 }

@@ -34,7 +34,7 @@ public class Landervator {
 				put("load", 999);
 			}};
 
-	public Landervator(LinearOpMode opMode) {
+	Landervator(LinearOpMode opMode) {
 		HardwareMap hardwareMap = opMode.hardwareMap;
 		extendMotor = new MotorWrapper(hardwareMap.get(DcMotor.class, "landerExtendMotor"));
 		extendMotor.init();
@@ -45,7 +45,7 @@ public class Landervator {
 		skiLiftMotor.addEncoderValuesToMap(SKI_LIFT_MOTOR_POSITIONS);
 	}
 
-	void controlExtension (double power) {
+	public void controlExtension (double power) {
 		extendMotor.setPower(power);
 		//TODO figure out skiLift tensioning as this happens
 	}
